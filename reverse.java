@@ -9,10 +9,18 @@ public class reverse{
         sum =sum*10+rem;
         rev(n/10);
     }
+
+    static boolean palin(int n){
+        sum=0;
+        rev(n);
+        return n == sum;
+    }
     public static void main(String[] args) {
         
-        rev(1234);
+        int n = 12321;
+        rev(n);
         System.out.println(sum);
+        System.out.println(palin(n));
     }
 
 }
